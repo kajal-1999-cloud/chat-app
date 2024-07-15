@@ -6,6 +6,7 @@ const jwt = require('jsonwebtoken');
 const path = require('path');
 
 
+
 router.post('/register', async (req, res) => {
   const { username, password, email } = req.body;
   try {
@@ -17,7 +18,7 @@ router.post('/register', async (req, res) => {
   }
 });
 
-app.get('/register', (req, res) => {
+router.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, '../../client', 'register.html'));
 });
 
@@ -41,7 +42,7 @@ router.post('/login', async (req, res) => {
   }
 });
 
-app.get('/register', (req, res) => {
+router.get('/register', (req, res) => {
   res.sendFile(path.join(__dirname, '../../client', 'register.html'));
 });
 
