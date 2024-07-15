@@ -1,0 +1,99 @@
+.card {
+    width: 380px;
+    height: 60%;
+    /* padding: 14rem; */
+    background: #F4F6FB;
+    border: 1px solid white;
+    box-shadow: 10px 10px 64px 0px rgba(180, 180, 207, 0.75);
+    -webkit-box-shadow: 10px 10px 64px 0px rgba(186, 186, 202, 0.75);
+    -moz-box-shadow: 10px 10px 64px 0px rgba(208, 208, 231, 0.75);
+  }
+  
+  .form {
+    padding: 3rem;
+    margin: 3rem;
+  }
+  
+  .card_header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .card svg {
+    color: #7878bd;
+    margin-bottom: 20px;
+    margin-right: 5px;
+  }
+  
+  .form_heading {
+    padding-bottom: 20px;
+    font-size: 21px;
+    color: #7878bd;
+  }
+  
+  .field {
+    padding-bottom: 10px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    margin: .5rem;
+  }
+  
+  .input {
+    border-radius: 5px;
+    background-color: #e9e9f7;
+    padding: 5px;
+    margin: .5rem;
+    width: 100%;
+    color: #7a7ab3;
+    border: 1px solid #dadaf7
+  }
+  
+  .input:focus-visible {
+    outline: 1px solid #aeaed6;
+  }
+  
+  .input::placeholder {
+    color: #bcbcdf;
+  }
+  
+  label {
+    color: #B2BAC8;
+    font-size: 14px;
+    display: block;
+    padding-bottom: 4px;
+  }
+  
+  button {
+    background-color: #7878bd;
+    padding: 5px;
+    margin: 1.5rem ;
+    /* margin-left: 2.5rem; */
+    font-size: 14px;
+    border-radius:6px;
+    padding: .6rem 3rem;
+    height: auto;
+    width: 95%;
+
+    font-weight: 500;
+    color: white;
+    border: none;
+  }
+  
+
+
+  button:hover {
+    background-color: #5f5f9c;
+  }
+
+  
+.login-container{
+    display: flex;
+    height: 100vh;
+
+    align-items: center;
+    justify-content: center;
+  }
