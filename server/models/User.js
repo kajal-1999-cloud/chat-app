@@ -3,8 +3,6 @@ const bcrypt = require('bcryptjs');
 
 
 
-
-
 const UserSchema = new mongoose.Schema({
   username: { type: String, required: true },
   password: { type: String, required: true, unique:true },
@@ -21,5 +19,13 @@ UserSchema.pre('save', async function (next) {
 UserSchema.methods.matchPassword = async function (password) {
   return await bcrypt.compare(password, this.password);
 };
+
+if(process.env.NODE_ENV = 'peoduction'){
+   this.apply.use(express.static(path.join(_dirname,)))
+}else{
+  this.apply.get('/', (req, res) => {
+    res.send("api running")
+  })
+}
 
 module.exports = mongoose.model('User', UserSchema);

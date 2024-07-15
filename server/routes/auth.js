@@ -4,6 +4,7 @@ const User = require('../models/User');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
+
 router.post('/register', async (req, res) => {
   const { username, password, email } = req.body;
   try {
@@ -13,6 +14,10 @@ router.post('/register', async (req, res) => {
   } catch (err) {
     res.status(400).send(err.message);
   }
+});
+
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../client', 'register.html'));
 });
 
 router.post('/login', async (req, res) => {
@@ -33,6 +38,10 @@ router.post('/login', async (req, res) => {
   } catch (err) {
     res.status(500).send(err.message);
   }
+});
+
+app.get('/register', (req, res) => {
+  res.sendFile(path.join(__dirname, '../../client', 'register.html'));
 });
 
 module.exports = router;
