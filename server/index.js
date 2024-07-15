@@ -19,13 +19,10 @@ app.use('/api', MessageRoutes);
 
 
 //  Deployment
-
 const path = require('path');
 
-// Serve static files from the frontend
 app.use(express.static(path.join(__dirname, '../client')));
 
-// Fallback to index.html for any other requests
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, '../client', 'index.html'));
 });
