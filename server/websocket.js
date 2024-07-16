@@ -1,6 +1,6 @@
 const WebSocket = require('ws');
 const jwt = require('jsonwebtoken');
-const Message = require('./models/Message'); 
+const Message = require('./models/message'); 
 
 module.exports = (server) => {
     const wss = new WebSocket.Server({ server });
