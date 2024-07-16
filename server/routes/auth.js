@@ -5,7 +5,7 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const path = require('path');
 
-
+const secret_key = process.env.SECRET_KEY
 
 router.post('/register', async (req, res) => {
   const { username, password, email } = req.body;
@@ -35,7 +35,7 @@ router.post('/login', async (req, res) => {
       email: user.email
     }
     console.log("everthing good")
-    const token = jwt.sign(userpayload, 'secretkey', { expiresIn: '1h' });
+    const token = jwt.sign(userpayload, secret_key, { expiresIn: '5h' });
     res.json({ token });
   } catch (err) {
     res.status(500).send(err.message);
