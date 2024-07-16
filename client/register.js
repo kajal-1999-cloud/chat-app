@@ -6,7 +6,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     const password = document.getElementById('password').value;
 
     try {
-        const response = await fetch('https://chat-app-c9fn.onrender.com/api/auth/register', {
+        const response = await fetch('https://chat-app-6liz.onrender.com/api/auth/register', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

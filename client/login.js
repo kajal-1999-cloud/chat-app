@@ -10,7 +10,7 @@ document.getElementById('loginForm').addEventListener('submit', async (e) => {
     };
 
     try {
-        const response = await fetch('https://chat-app-c9fn.onrender.com/api/auth/login', {
+        const response = await fetch('https://chat-app-6liz.onrender.com/api/auth/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

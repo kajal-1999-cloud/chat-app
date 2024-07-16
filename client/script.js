@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     socket.onopen = () => {
         console.log('Connected to WebSocket');
 
-        fetch('https://chat-app-c9fn.onrender.com/api/messages')
+        fetch('https://chat-app-6liz.onrender.com/api/messages')
             .then(response => response.json())
             .then(messages => {
                 messages.forEach(message => {
